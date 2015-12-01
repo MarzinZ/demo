@@ -11,7 +11,7 @@ $(document).ready(function() {
 
             $("#version-list li").click(function() {
                     var pathname = window.location.pathname;
-                    window.location.href = window.location.href.replace(pathname, '/'+ $(this).text() + '/')
+                    window.location.href = window.location.href.replace(/v(\w+\.)?(\w+\.)?(\w+)/, $(this).text());
                     return false;
             });
         }
